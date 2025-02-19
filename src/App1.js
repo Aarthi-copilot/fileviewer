@@ -54,9 +54,21 @@ const App = () => {
           // return false;
       }
       console.log(apiUrl);
-      
+      // API call from backend
+      // const response = await fetch(apiUrl);
+      // console.log(response);
 
-      setUrl(apiUrl); 
+      // if (!response.ok) {
+      //   throw new Error("Failed to fetch file");
+      // }
+
+      setUrl(apiUrl); // Set the API URL as the file source
+      
+      // const document = {
+      //   id: 1,
+      //   uri: selectedUrl,
+      // }
+      //setSelectedDocument(document)
       if (param === 'msg1' || param === 'msg2') {
         fetch(apiUrl)
         .then(response=>response.json())
